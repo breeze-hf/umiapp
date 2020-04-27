@@ -200,9 +200,6 @@ function vipList({ dispatch, vipModel, }) {
             <Form.Item name="userId" >
               <Input placeholder="请输入编号" />
             </Form.Item>
-            <Form.Item name="nickName">
-              <Input placeholder="请输入昵称" />
-            </Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit" style={{ marginRight: 10 }}>
                 查询

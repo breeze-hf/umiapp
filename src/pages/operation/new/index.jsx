@@ -39,6 +39,13 @@ function newList({ dispatch, newModel, }) {
       payload: {
         addModalVisible: true,
         addModalTitle: '新建分类',
+        formData: {
+          configName: '',
+          goodsId: '',
+          configType: 4  ,
+          redirectUrl: '',
+          configRank: ''
+        },
         editId: ''
       },
     });
@@ -50,7 +57,11 @@ function newList({ dispatch, newModel, }) {
       payload: {
         addModalVisible: false,
         formData: {
-
+          configName: '',
+          goodsId: '',
+          configType: 4  ,
+          redirectUrl: '',
+          configRank: ''
         },
         editId: ''
       },
@@ -77,18 +88,6 @@ function newList({ dispatch, newModel, }) {
       });
     }
   }
-
-  const onFinish = values => {
-    dispatch({
-      type: `${namespace}/fetch`,
-      payload: {
-        ...values,
-        page: 1,
-        limit: 10
-      },
-    });
-  };
-
 
   const addProp = {
     addModalVisible,
