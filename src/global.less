@@ -1,0 +1,97 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.content {
+  min-height: 500px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1em;
+  .content_title {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+  }
+  .content_search {
+    float: right;
+    input {
+      width: 150px;
+      margin-right: 0.5em;
+    }
+    button {
+      margin-left: 0.5em;
+    }
+    margin-bottom: 1em;
+  }
+  .content_content {
+    clear: both;
+  }
+}
+:global {
+  .tableOperator{
+    padding:16px 0
+  }
+  .search-select {
+    width: 200px !important;
+  }
+  .search-bar {
+    .ant-form-item-control {
+      flex: 1 1;
+    }
+    .ant-form-item-label {
+      min-width: 80px;
+      text-align: right;
+    }
+  }
+}
